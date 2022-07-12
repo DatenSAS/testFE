@@ -22,13 +22,13 @@ class account_move(models.Model):
         response = requests.post(url, data=json.dumps(json_data))
 
         _logger.critical('**********************************')
-        _logger.critical(response)
+        _logger.critical(response.content)
         _logger.critical('**********************************')
 
         url = "https://reqres.in/api/users/2"
         response = requests.get(url)
 
         _logger.critical('**********************************')
-        _logger.critical(response)
+        _logger.critical(response.content)
         _logger.critical('**********************************')
 
