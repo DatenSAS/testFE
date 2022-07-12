@@ -8,3 +8,6 @@ class account_move(models.Model):
 
     nombre = fields.Char(string="NombreFE")
     trabajo = fields.Char(string="TrabajoFE")
+
+    def action_post(self):
+        print ('HELLO AGAIN')
