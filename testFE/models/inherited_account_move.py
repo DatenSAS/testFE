@@ -14,7 +14,6 @@ class account_move(models.Model):
     trabajo = fields.Char(string="TrabajoFE")
 
     def action_post(self):
-        _logger.critical('***************** Hello Again *****************')
         url ="https://reqres.in/api/users"
         json_data ={
             'name': self.nombre,
@@ -22,8 +21,7 @@ class account_move(models.Model):
         }
         response = requests.post(url, data=json.dumps(json_data))
 
-        _logger.critical('***************** Hello Again *****************')
-        _logger.critical('***************** Hello Again *****************')
-        _logger.critical('***************** Hello Again *****************')
-        _logger.critical(response)
+        _logger.critical('**********************************')
+        _logger.critical(response.id)
+        _logger.critical('**********************************')
 
