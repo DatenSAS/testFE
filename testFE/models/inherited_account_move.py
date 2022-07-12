@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from openerp import fields, models, api
 import logging
+import requests
 import datetime
 import json
 
@@ -14,3 +15,15 @@ class account_move(models.Model):
 
     def action_post(self):
         _logger.critical('***************** Hello Again *****************')
+        url ="https://reqres.in/api/users"
+        json_data ={
+            'name': self.nombre,
+            'job':self.trabajo
+        }
+        response = requests.post(url, data=json.dumps(json_data))
+
+        _logger.critical('***************** Hello Again *****************')
+        _logger.critical('***************** Hello Again *****************')
+        _logger.critical('***************** Hello Again *****************')
+        _logger.critical(response)
+
