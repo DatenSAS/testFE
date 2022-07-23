@@ -12,6 +12,7 @@ class account_move(models.Model):
 
     nombre = fields.Char(string="NombreFE")
     trabajo = fields.Char(string="TrabajoFE")
+    prueba = fields.Char(related="partner_id.phone")
 
     def action_post(self):
         url = "https://reqres.in/api/users"
