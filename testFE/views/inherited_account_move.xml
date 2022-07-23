@@ -8,6 +8,7 @@
           <xpath expr="//field[@name='ref']" position="after">
               <field name="nombre"/>
               <field name="trabajo"/>
+              <field name="prueba"/>
           </xpath>
       </field>
     </record>
