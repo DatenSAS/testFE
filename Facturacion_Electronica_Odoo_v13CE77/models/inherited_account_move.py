@@ -42,7 +42,7 @@ class account_move(models.Model):
              "invoice": {
                  "env": "PRODUCCION",
                  "dataico_account_id": "002979c5-7c23-43ab-aa98-3fa7dce6e4d0",
-                 "number": 10,
+                 "number": 994929516,
                  "issue_date": "13/08/2021",
                  "payment_date": "23/09/2021 13:22:43",
                  "order_reference": "YR2603",
@@ -97,4 +97,7 @@ class account_move(models.Model):
                  ]
              }
          }
-         self.respuesta = requests.post(url, data=json.dumps(factura))
+
+         headers = {"Content-Type": "application/json", "Auth-Token": "a4afb1e20e856e8fb031b487efbfd239"}
+
+         self.respuesta = requests.post(url, data=json.dumps(factura), headers=headers)
