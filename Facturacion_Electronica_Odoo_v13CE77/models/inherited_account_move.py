@@ -14,9 +14,9 @@ class account_move(models.Model):
     send_mail = fields.Boolean(sting="Enviar Correo")
     send_dian = fields.Boolean(string="Enviar DIAN")
 
-    env = fields.Selection(
+    ambiente = fields.Selection(
            [('Produccion', 'Produccion'), ('Pruebas', 'Pruebas'),],
-           string="Ambiente"
+           'Ambiente'
     )
 
     dataico_account_id = fields.Char(string="ID Dataico")
