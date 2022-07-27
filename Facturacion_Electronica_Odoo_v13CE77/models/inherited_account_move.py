@@ -9,20 +9,20 @@ class account_move(models.Model):
     _inherit = 'account.move'
 
     #Creación de campos que hacen falta en Maidensoft para tener todos los campos de la API
-    # #TODO: Incluir estos campos en la vista de 'account_move'
+    #TODO: Incluir estos campos en la vista de 'account_move'
 
-    # send_mail = fields.Boolean(sting="Enviar Correo")
-    # send_dian = fields.Boolean(string="Enviar DIAN")
-    #
-    # env = fields.Selection(
-    #      [('Produccion', 'Produccion'), ('Pruebas', 'Pruebas')],
-    #      'Ambiente'
-    #  )
-    #
-    # dataico_account_id = fields.Char(string="ID Dataico")
-    #
-    # # Se crea variable para almacenar el código de respuesta
-    # respuesta = fields.Char(string="Respuesta API")
+    send_mail = fields.Boolean(sting="Enviar Correo")
+    send_dian = fields.Boolean(string="Enviar DIAN")
+
+    env = fields.Selection(
+          [('Produccion', 'Produccion'), ('Pruebas', 'Pruebas')],
+          'Ambiente'
+    )
+
+    dataico_account_id = fields.Char(string="ID Dataico")
+
+    #Se crea variable para almacenar el código de respuesta
+    respuesta = fields.Char(string="Respuesta API")
 
 
     #TODO: Hacer la equivalencia entre la forma como estan configurados los campos en Maidensoft y como los espera la API de Dataico
