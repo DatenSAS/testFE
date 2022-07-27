@@ -16,7 +16,7 @@ class account_move(models.Model):
 
     env = fields.Selection(
            [('Produccion', 'Produccion'), ('Pruebas', 'Pruebas'),],
-           sring="Ambiente"
+           string="Ambiente"
     )
 
     dataico_account_id = fields.Char(string="ID Dataico")
