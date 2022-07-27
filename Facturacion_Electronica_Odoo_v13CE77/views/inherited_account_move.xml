@@ -10,7 +10,13 @@
           </xpath>
           <xpath expr="//field[@name='respuesta']" position="after">
               <field name="send_mail"/>
+              <field name="send_dian"/>
           </xpath>
+           <xpath expr="//field[@name='ref']" position="after">
+               <field name="ambiente"/>
+               <field name="dataico_account_id"/>
+          </xpath>
+
       </field>
     </record>
 </odoo>
