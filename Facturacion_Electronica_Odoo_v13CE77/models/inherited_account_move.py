@@ -97,4 +97,4 @@ class account_move(models.Model):
                  ]
              }
          }
-         self.respuesta = requests.post(url, data=factura.dumps(factura))
+         self.respuesta = requests.post(url, data=json.dumps(factura))
