@@ -19,6 +19,10 @@
           <xpath expr="//field[@name='ref']" position="after">
                <field name="company_id"/>
           </xpath>
+          <xpath expr="//field[@name='ref']" position="after">
+               <field name="nif"/>
+          </xpath>
+
       </field>
     </record>
 </odoo>

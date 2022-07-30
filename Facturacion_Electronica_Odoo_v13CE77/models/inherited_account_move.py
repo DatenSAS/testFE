@@ -21,6 +21,8 @@ class account_move(models.Model):
 
     dataico_account_id = fields.Char(string="ID Dataico")
 
+    nif = fields.Char(related ='company_id.vat')
+
     #Se crea variable para almacenar el código de respuesta
     respuesta = fields.Char(string="Respuesta API")
 
