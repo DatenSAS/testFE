@@ -16,7 +16,9 @@
                <field name="ambiente"/>
                <field name="dataico_account_id"/>
           </xpath>
-
+          <xpath expr="//field[@name='ref']" position="after">
+               <field name="company_id"/>
+          </xpath>
       </field>
     </record>
 </odoo>
